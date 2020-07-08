@@ -1,3 +1,5 @@
+# Simple Binary Tree Implementation
+
 class Node:
     def __init__(self,key):
         self.left = None
@@ -16,5 +18,6 @@ root.left.left = Node(4)
 #    4    None  None  None 
 #   /  \ 
 # None None
+
 
 
