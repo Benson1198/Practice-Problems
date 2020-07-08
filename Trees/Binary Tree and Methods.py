@@ -40,3 +40,23 @@ def inorder(temp):
 
 # Function to insert element in Binary Tree 
 
+def insert(temp,key):
+    q = []
+    q.append(temp)
+
+    while(len(q)):
+        temp = q[0]
+        q.pop(0)
+
+        if(not temp.left):
+            temp.left = newNode(key)
+            break
+        else:
+            q.append(temp.left)
+
+        if(not temp.right):
+            temp.right = newNode(key)
+            break
+        else:
+            q.append(temp.right)
+
