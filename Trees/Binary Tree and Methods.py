@@ -20,4 +20,23 @@ root.left.left = Node(4)
 # None None
 
 
+# Binary Tree Insertion Methods
+
+class newNode:
+
+    def __init__(self,data):
+        self.key = data
+        self.left = None
+        self.right = None
+
+# Inorder traversal of Binary Tree
+def inorder(temp):
+    if(not temp):
+        return
+    
+    inorder(temp.left)
+    print(temp.key,end = ' ')
+    inorder(temp.right)
+
+# Function to insert element in Binary Tree 
 
