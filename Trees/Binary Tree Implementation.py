@@ -1,4 +1,4 @@
-class BinaryTree():
+class BinaryTree:
 
     def __init__(self,rootObj):
         self.key = rootObj
