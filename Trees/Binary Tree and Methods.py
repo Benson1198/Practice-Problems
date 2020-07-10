@@ -60,3 +60,32 @@ def insert(temp,key):
         else:
             q.append(temp.right)
 
+# Function to delete deepest given node in Binary Tree
+
+def deleteDeepest(root,d_node):
+    q = []
+    q.append(root)
+    
+    while(len(q)):
+        temp = q.pop(0)
+        if temp is d_node:
+            temp = None
+            return
+        
+        if temp.right:
+            if temp.right is d_node:
+                temp.right = None
+                return
+            else:
+                q.append(temp.right)
+        
+        if temp.left:
+            if temp.left is d_node:
+                temp.left = None
+                return
+            else:
+                q.append(temp.left)
+
+
+# Function to delete element in Binary Tree
+    
