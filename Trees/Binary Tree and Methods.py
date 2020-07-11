@@ -102,7 +102,21 @@ def deletion(root,key):
     key_node = None
     q = []
     q.append(root)
-    
+    while(len(q)):
+        temp = q.pop(0)
+        if temp.key == key:
+            key_node = temp
+        if temp.left:
+            q.append(temp.left)
+        if temp.right:
+            q.append(temp.right)
+        
+    if key_node:
+        x = key_node
+        deleteDeepest(root,temp)
+        key_node.data = x
+    return root
+
 
     
     
