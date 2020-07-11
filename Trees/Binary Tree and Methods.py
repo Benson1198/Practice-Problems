@@ -88,4 +88,21 @@ def deleteDeepest(root,d_node):
 
 
 # Function to delete element in Binary Tree
+
+def deletion(root,key):
+    if root == None:
+        return None
+    
+    if root.left == None and root.right == None:
+        if root.key == key:
+            return None
+        else:
+            return root
+    
+    key_node = None
+    q = []
+    q.append(root)
+    
+
+    
     
