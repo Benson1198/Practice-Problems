@@ -141,6 +141,26 @@ def findLCAUtil(root,n1,n2,v):
     return left_lca if left_lca is not None else right_lca
 
 
+def find(root,k):
+    if root is None:
+        return False
+    
+    if (root.key == k or find(root.left,k) or find(root.right,k)):
+        return True
+    
+    return False
+
+def findLCA(root,n1,n2):
+    v = [False,False]
+
+    lca = findLCAUtil(root,n1,n2,v)
+
+    if (v[0] and v[1] or v[0] and find(lca,n2) or v[1] and find(lca,n1)):
+        return lca
+
+    return None
+
+
 
     
     
