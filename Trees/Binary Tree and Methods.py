@@ -120,6 +120,26 @@ def deletion(root,key):
 
 # Method to find Lowest Common Ancestor
 
+def findLCAUtil(root,n1,n2,v):
+    if root is None:
+        return None
+    
+    if root.key == n1:
+        v[0] = True
+        return root
+    
+    if root.key == n2:
+        v[1] = True
+        return root
+    
+    left_lca = findLCAUtil(root.left,n1,n2,v)
+    right_lca = findLCAUtil(root.right,n1,n2,v)
+
+    if left_lca and right_lca:
+        return root
+    
+    return left_lca if left_lca is not None else right_lca
+
 
 
     
