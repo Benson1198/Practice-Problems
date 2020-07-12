@@ -118,5 +118,9 @@ def deletion(root,key):
     return root
 
 
+# Method to find Lowest Common Ancestor
+
+
+
     
     
