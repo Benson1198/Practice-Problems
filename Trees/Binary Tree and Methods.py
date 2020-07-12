@@ -114,7 +114,7 @@ def deletion(root,key):
     if key_node:
         x = key_node
         deleteDeepest(root,temp)
-        key_node.data = x
+        key_node.key = x
     return root
 
 
