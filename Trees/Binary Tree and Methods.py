@@ -161,6 +161,18 @@ def findLCA(root,n1,n2):
     return None
 
 
+# Method to find the diameter of Binary Tree
+
+# Height Object
+
+class Height:
+    def __init__(self):
+        self.h = 0
+
+# Optimised Recursive function to find the diameter
+
+def 
+
 
     
     
