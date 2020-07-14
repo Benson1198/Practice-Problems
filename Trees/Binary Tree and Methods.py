@@ -189,6 +189,10 @@ def diameterOpt(root,height):
 
     return max(lh.h + rh.h + 1, max(ldiameter, rdiameter))
 
+def diameter(root):
+    height = Height()
+    return diameterOpt(root,height)
+
 
 
     
