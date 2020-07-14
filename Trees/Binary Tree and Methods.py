@@ -171,7 +171,24 @@ class Height:
 
 # Optimised Recursive function to find the diameter
 
-def 
+def diameterOpt(root,height):
+    lh = Height()
+    rh = Height()
+
+    if root is None:
+        height.h = 0
+        return 0
+
+
+    
+    ldiameter = diameterOpt(root.left,lh)
+    rdiameter = diameterOpt(root.right,rh)
+
+    height.h = max(lh.h,rh.h) + 1
+
+
+    return max(lh.h + rh.h + 1, max(ldiameter, rdiameter))
+
 
 
     
