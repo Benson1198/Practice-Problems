@@ -72,7 +72,7 @@ def nextLargerElement(arr,n):
 
 # My Solution using STACKS
 
-def nextLargerElement(arr):
+def nextLargerElementToRight(arr):
     n = len(arr)
 
     stack = []
