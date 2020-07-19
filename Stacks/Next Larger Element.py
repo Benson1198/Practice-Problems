@@ -102,4 +102,4 @@ def nextLargerElementToRight(arr):
 
 arr = [1,3,2,4]
 
-print(nextLargerElement(arr))
+print(nextLargerElementToRight(arr))
