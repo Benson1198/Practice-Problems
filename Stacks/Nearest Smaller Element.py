@@ -28,7 +28,7 @@ def nextSmallerElementToLeft(arr):
 
 
 
-def nextSmallerElementToLeft(arr):
+def nextSmallerElementToRight(arr):
     n = len(arr)
 
     stack = []
