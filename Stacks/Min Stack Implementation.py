@@ -2,7 +2,7 @@
 
 class MinStackExtra():
 
-    def __init__(self,lst,s_lst):
+    def __init__(self):
         self.lst = []
         self.s_lst = []
 
@@ -31,7 +31,31 @@ class MinStackExtra():
             return self.s_lst[-1]
 
     def __str__(self):
-        return str(lst)
+        return str(self.lst)
+        
+stack = MinStackExtra()
+
+stack.push(18)
+stack.push(19)
+stack.push(29)
+stack.push(15)
 
 
-    
+print(stack)
+print(stack.minElement())
+
+stack.pop()
+
+print(stack)
+print(stack.minElement())
+
+
+stack.push(16)
+
+print(stack)
+print(stack.minElement())
+
+
+# Min Stack Implementation in O(1) space
+
+class MinStack
