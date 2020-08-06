@@ -11,7 +11,7 @@ def lca(root, n1, n2):
     
     right = lca(root.right, n1, n2)
     
-    if left and right: 
-        return root  
-  
+    if left and right:
+        return root
+        
     return left if left is not None else right
