@@ -78,3 +78,41 @@ class MinHeap:
         self.decreaseKey(i,float('-inf'))
 
         self.extractMin()
+
+# Function to buil a min meap out of an unordered array(Heap sort)
+
+def left(i):
+    return 2*i+1
+    
+def right(i):
+    return 2*i+2
+    
+def parent(i):
+    return int((i-1)/2)
+
+def minHeapify(heap,i):
+    n = len(heap)
+
+    lt = left(i)
+    rt = right(i)
+    smallest = i
+
+    if (lt < n) and (heap[lt] < heap[i]):
+        smallest = lt
+        
+    if (rt < n) and (heap[rt] < heap[i]):
+        smallest = rt
+        
+    if smallest != i:
+        heap[i],heap[smallest] = heap[smallest],heap[i]
+        minHeapify(heap,smallest)
+
+def buildHeap(arr):
+    '''
+    Basic idea is to call minHeapify function first for bottom-most rightmost internal
+    node and then go on till index zero.
+    '''
+    brn = parent(len(arr)-1)
+
+    for i in range(i,-1,-1):
+        minHeapify(arr,i)
