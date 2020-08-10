@@ -40,7 +40,7 @@ class MinHeap:
         
         if smallest != i:
             self.heap[i],self.heap[smallest] = self.heap[smallest],self.heap[i]
-            minHeapify(self,smallest)
+            self.minHeapify(self,smallest)
         
     # Extract Min: Method to extract the min. element
 
@@ -57,7 +57,7 @@ class MinHeap:
 
         temp = self.heap.pop()
 
-        minHeapify(0)
+        self.minHeapify(0)
 
         return temp
     
@@ -73,5 +73,8 @@ class MinHeap:
 
     # Method to delete a key
 
-    def deleteKey(self):
+    def deleteKey(self,i):
         
+        self.decreaseKey(i,float('-inf'))
+
+        self.extractMin()
