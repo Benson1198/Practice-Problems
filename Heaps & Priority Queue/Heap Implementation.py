@@ -45,7 +45,21 @@ class MinHeap:
     # Extract Min: Method to extract the min. element
 
     def extractMin(self):
+        n = len(self.heap)
+
+        if n == 0:
+            return "Heap is Empty"
         
+        if n == 1:
+            return self.heap[0]
+
+        self.heap[0],self.heap[-1] = self.heap[-1],self.heap[0]
+
+        temp = self.heap.pop()
+
+        minHeapify(0)
+
+        return temp
 
         
 
