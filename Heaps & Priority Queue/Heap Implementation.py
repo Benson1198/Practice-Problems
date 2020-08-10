@@ -60,11 +60,18 @@ class MinHeap:
         minHeapify(0)
 
         return temp
+    
+    #  Method to decrese a given key
+    
+    def decreaseKey(self,i,k):
+        self.heap[i] = k
 
-        
+        while i!= 0 and self.heap[parent(i)] > self.heap[i]:
+            self.heap[parent(i)],self.heap[i] = self.heap[i],self.heap[parent(i)]
+            i = parent(i)
 
 
-        
+    # Method to delete a key
 
-
+    def deleteKey(self):
         
