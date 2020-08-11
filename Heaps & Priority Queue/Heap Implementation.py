@@ -114,5 +114,5 @@ def buildHeap(arr):
     '''
     brn = parent(len(arr)-1)
 
-    for i in range(i,-1,-1):
+    for i in range(brn,-1,-1):
         minHeapify(arr,i)
